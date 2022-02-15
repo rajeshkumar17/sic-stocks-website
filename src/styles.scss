@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    font-family: 'Poppins';
+}
+
+@media (max-width: 1900px) {
+  html { font-size: 16px; }
+}
+@media (max-width: 1800px) {
+  html { font-size: 16px; }
+}
+@media (max-width: 1700px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 1024px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 768px) {
+  html { font-size: 12px; }
+  .main-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media (max-width: 500px) {
+  html { font-size: 10px; }
+}
+
+h1{
+  font-size: 2rem;
+  font-weight: bold; 
+}  
+
+h2{
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: normal;  
+}
+h3{
+  font-size: 1.2rem;
+  font-weight: normal; 
+  letter-spacing: normal;
+}
+
+p{
+  font-size: 1rem;
+  letter-spacing: normal;
+  line-height: 1.54;
+  font-weight: normal;   
+}
+
+
+h4{
+  font-size: 0.9rem;
+  letter-spacing: normal;
+  line-height: 1;
+  font-weight: 600;   
+
+}
+a{ 
+  font-size: 1rem;
+}
+.link{
+  text-decoration-line: none;
+}
+.home-background-color{
+  background-color: #002238;
+}
+.text-color{
+  color: #2C8BE5;
+}
+.features-background-color{
+  background-color: #E5E6E8;
+}
+.desktop{
+  display: block;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 991px) {
+  .desktop{
+       display: none;
+  }
+  .mobile{
+       display: block;
+  }     
+}

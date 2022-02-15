@@ -1,0 +1,118 @@
+<div class="border-0 desktop">
+    <div class="d-flex">
+        <div class="col-md-7 col-sm-11">
+            <img class="img-responsive" src="../../../assets/images/join_banner.png" alt="...">
+        </div>
+        <div class="col-md-4 col-sm-11 px-5 py-4">
+            <div class="card mt-2 text-center">
+                <div class="card-body card-form-below p-4">
+                <h3 class="card-title pb-4"><strong>PLEASE FILL THE FORM BELOW</strong></h3>
+                <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm.value)">
+                    <div class="form-group pb-4">
+                        <input type="text" id="name" placeholder="Name" [(ngModel)]="nameText" #name="ngModel" name="name"
+                            class="form-control" (keypress)="keyPressCharacter($event)" required />
+                        <div *ngIf="name.touched && name.errors">
+                            <div class="alert alert-danger" *ngIf="name.errors.required">Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group pb-4">
+                        <input type="text" id="email" placeholder="Email" [(ngModel)]="emailText" #email="ngModel"
+                            name="email" class="form-control" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+"
+                            required />
+                        <div *ngIf="email.touched && email.errors">
+                            <div class="alert alert-danger" *ngIf="email.errors.required">Email is required</div>
+                            <div class="alert alert-danger" *ngIf="email.errors.pattern">Email must be a valid email address
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group pb-4">
+                        <input type="text" id="phone" placeholder="Phone" [(ngModel)]="phoneText" #phone="ngModel"
+                            name="phone" class="form-control" minlength="10" maxlength="10" (keypress)="keyPress($event)"
+                            required />
+                        <div *ngIf="phone.touched && phone.errors">
+                            <div class="alert alert-danger" *ngIf="phone.errors.required">Phone is required</div>
+                            <div class="alert alert-danger" *ngIf="phone.errors.maxlength || phone.errors.minlength">
+                                Please enter 10 Digits Only</div>
+                        </div>
+                    </div>
+                    <button type="submit" [disabled]="!contactForm.valid"
+                        class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>    
+    </div>
+</div> 
+<!-- ------------------------------------    -->
+<div class="py-5">
+    <h2 class="text-center" style="color: #0077ed"><strong>WHY BECOME AN SIC ROBO AUTHORISED PERSON?</strong></h2>
+    <div class="main-container">
+        <div class="container mt-3">
+            <div class="row justify-content-between">
+                <div class="col-md-3 col-4 col-sm-4">
+                    <div class="card border-0" style="color: #e40016;">
+                        <div class="card-body text-center">
+                            <p class="card-text h5"><strong>Our Army background</strong></p>
+                            <p class="card-text h6 pt-2">Ensures we carry Discipline</p>
+                            <p class="card-text h6">Hardwork & Reliability</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-4 col-sm-4">
+                    <div class="card border-0" style="color: #17358f;">
+                        <div class="card-body text-center">
+                            <p class="card-text h5"><strong>High quality Service</strong></p>
+                            <p class="card-text h6 pt-2">Personalised experience</p>
+                            <p class="card-text h6">for our exclusive clientele</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-4 col-sm-4">
+                    <div class="card border-0" style="color: #00aafb;">
+                        <div class="card-body text-center">
+                            <p class="card-text h5"><strong>29 yr old legacy</strong></p>
+                            <p class="card-text h6 pt-2">Strong army foundation</p>
+                            <p class="card-text h6">that you can trust</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-light">
+    <div class="main-container">
+        <div class="container pt-2 pb-5" style="color: #0077ed;">
+            <h2 class="text-center pt-3 pb-2"><strong>BENEFITS OF BECOMING AN AUTHORISED PERSON</strong></h2>
+            <div class="row justify-content-between ps-1 pe-3">
+                <div class="col-md-4 col-sm-6 col-6" *ngFor="let item of arrayData">
+                    <div class="card shadow mt-3">
+                        <div class="card-body">
+                            <div class="w-25 h-25 border mx-auto">
+                                <img src="{{item.imageUrl}}" class="img-fluid" />
+                            </div>
+                            <p class="text-center">{{item.title}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="container pt-4 pb-5" style="color: #0077ed;">
+        <h2 class="text-center"><strong>Receive and provide Our Products & Services:</strong></h2>
+        <div class="row justify-content-between ps-1 pe-3">
+            <div class="col-md-6 col-sm-6 col-6 mt-4" *ngFor="let item of productData">
+                <div class="card bg-light h-100">
+                    <div class="card-body">
+                        <p class="text-center h4">{{item.title1}}</p>
+                        <p class="text-center h6">{{item.title2}}</p>
+                        <p class="text-center">{{item.title3}}</p>
+                        <p class="text-center">{{item.title4}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

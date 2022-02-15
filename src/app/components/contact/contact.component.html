@@ -1,0 +1,70 @@
+<div class="card col-12 border-0">
+    <img class="card-img" src="../../../assets/images/contactus_banner.png" alt="...">
+    <div class="card-img-overlay text-white d-flex justify-content-center align-items-center">
+      <h1 class="">Contact Us</h1>
+    </div>
+  </div>
+
+<div class="container my-4 p-4">
+    <div class="">
+        <h1>Say Hello!</h1>
+        <h3>Send us a message using the contact form or use information below to reach us.</h3>
+    </div>
+    <div class="row justify-content-between mt-3">
+        <div class="col-md-7 col-sm-6 col-12 bg-light py-4 ps-5 pe-5">
+            <h2>We’d Love to Hear from You</h2>
+            <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm.value)">
+                <div class="row justify-content-between">
+                    <div class="form-group col-md-6 col-sm-12 col-12">
+                        <input type="text" id="name" placeholder="Name" [(ngModel)]="nameText" #name="ngModel" name="name" class="form-control" (keypress)="keyPressCharacter($event)" required/>
+                        <div *ngIf="name.touched && name.errors">
+                          <div class="alert alert-danger" *ngIf="name.errors.required">Name is required</div>
+                      </div>              
+                    </div>
+                    <div class="form-group col-md-6 col-sm-12 col-12 form-container">
+                        <input type="text" id="email" placeholder="Email" [(ngModel)]="emailText" #email="ngModel" name="email" class="form-control" pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+" required />
+                        <div *ngIf="email.touched && email.errors">
+                          <div class="alert alert-danger" *ngIf="email.errors.required">Email is required</div>
+                          <div class="alert alert-danger" *ngIf="email.errors.pattern">Email must be a valid email address</div>
+                      </div>              
+                    </div>
+                </div>
+                <div class="row justify-content-between mt-3">
+                    <div class="form-group col-md-6 col-sm-12 col-12">
+                        <input type="text" id="phone" placeholder="Phone" [(ngModel)]="phoneText" #phone="ngModel" name="phone" class="form-control" minlength="10" maxlength="10" (keypress)="keyPress($event)" required/>
+                        <div *ngIf="phone.touched && phone.errors">
+                          <div class="alert alert-danger" *ngIf="phone.errors.required">Phone is required</div>
+                          <div class="alert alert-danger" *ngIf="phone.errors.maxlength || phone.errors.minlength">
+                            Please enter 10 Digits Only</div>
+                      </div>              
+                    </div>
+                    <div class="form-group col-md-6 col-sm-12 col-12 form-container">
+                        <input type="text" placeholder="Subject" id="subject" [(ngModel)]="subjectText" #subject="ngModel" name="subject" class="form-control" required/>
+                        <div *ngIf="subject.touched && subject.errors">
+                          <div class="alert alert-danger" *ngIf="subject.errors.required">Subject is required</div>
+                      </div>              
+                    </div>
+                </div>
+                <div class="form-group col-12 mt-3">
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" [disabled]="!contactForm.valid" class="btn btn-primary float-end mt-3">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-5 col-12 bg-light address-container p-4">
+            <div class="d-flex">
+                <img class="img-responsive h-50 pt-1" src="../../../assets/images/location_icon.png" />
+                <p class="ps-3">#501, Prestige Meridian 2, MG Road, Bangalore, India 560 001</p>
+            </div>
+            <div class="d-flex">
+                <img class="img-responsive h-50 pt-1" src="../../../assets/images/call_icon.png" />
+                <p class="ps-3">(+91) 80 25329222</p>
+            </div>
+            <div class="d-flex">
+                <img class="img-responsive h-50 pt-1" src="../../../assets/images/email_icon.png" />
+                <p class="ps-3 w-50">Grievance email ID: helpdesk@sicstocks.com</p>
+            </div>         
+        </div>
+
+    </div>
+</div>  

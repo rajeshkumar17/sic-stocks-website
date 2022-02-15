@@ -1,0 +1,20 @@
+<div class="card col-12 position-sticky">
+  <img class="card-img" src="../../../assets/images/team_banner.png" alt="...">
+  <div class="card-img-overlay text-white d-flex justify-content-center align-items-center">
+    <h1 class="">Our Team</h1>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-3 col-sm-4 col-6 mb-3 pl-2" *ngFor="let items of item">
+      <div class="card card-container">
+        <img src="{{items.iconUrl}}" class="card-img-top img-responsive" alt="icon">
+        <div class="card-body">
+          <p class="card-text font-weight-bold lh-sm"><strong>{{items.name}}</strong></p>
+          <p class="card-text description-height lh-sm">{{items.designation}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+<div class="main-container">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-6 pt-5">
+                <h1 class="pt-5 font-weight-bold banner-font">India's First <br />Broking as API.</h1>
+                <h3 class="pt-2">Calling All Innovators in Indian Equities<br /></h3>
+                <button type="button" class="btn btn-primary rounded-pill btn-lg mt-4" [routerLink]="['/services']">Know
+                    More</button>
+            </div>
+            <div class="col-md-6">
+                <img class="img-fluid" src='../../../assets/images/landing-banner.png' />
+            </div>
+        </div>
+        <!-- ---------------------- -->
+        <div class="bg-light mt-5">
+            <div class="container py-5">
+                <div class="row justify-content-between ps-1 pe-3">
+                    <div class="col-md-4 col-sm-6 col-6" *ngFor="let item of imageArray">
+                        <div class="card border-0 m-2 bg-light">
+                            <img src="{{item.imageUrl}}" class="card-img-top card-image img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------- -->
+    <div class="main-container">
+        <div class="container mt-4 mb-4">
+            <div class="d-flex">
+                <div class="col-md-3 col-sm-3 col-2 mx-auto">
+                    <img class="img-fluid w-100 mx-auto" src='../../../assets/images/kyc.png' />
+                </div>
+                <div class="col-md-6 col-sm-6 col-7 pt-4">
+                    <h3 class="mx-auto">Open a Demat Account in 5 mins</h3>
+                    <h2 class="mx-auto"><strong>Hassle free Instant eKYC</strong></h2>
+                    <h3 class="pt-1">Let us assist you in your investment journey</h3>  
+                    <button class="btn btn-primary mt-3 mb-3 small" [routerLink]="['/contact']">Contact Us</button>
+                </div>
+                <div class="col-md-3 col-sm-3 col-2 float-end">
+                    <img class="img-fluid w-100" src='../../../assets/images/seal.png' />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-background-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-11 pt-4">
+                    <h3>Market movements are fast and so is our payment Gateway</h3>
+                    <h2 class=""><strong>Smart payments for the smart trader</strong></h2>
+                    <h3 class="pt-2">Simply Scan the QR core and transfer funds in 15 seconds</h3> 
+                </div>
+                <div class="col-md-6 col-sm-6 col-11 float-end mx-auto">
+                    <img class="img-fluid w-75 float-end mx-auto" src='../../../assets/images/qrcode.png' />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light">
+        <div class="container bg-light">
+            <div class="row justify-content-between">
+                <div class="col-md-5 col-sm-10 col-10">
+                    <img class="img-fluid" src='../../../assets/images/sic_banner.png' />
+                </div>
+                <div class="col-md-6 sol-sm-10 col-10 pt-5">
+                    <h3>Looking for a new & interesting Source of Income?</h3>
+                    <h2 class=""><strong>Become a Business Partner</strong></h2>
+                    <h3 class="pt-2">Earn maximum returns and Help others do the same</h3>  
+                    <h3 class="pt-2">Special offer for LIC agents. Apply before March 31, 2022</h3>  
+                    <button class="btn btn-primary ps-4 pe-4 mt-3 mb-3 small" [routerLink]="['/join-us']">Join Us</button>       
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------- -->
+    <div class="container">
+        <div class="row mt-5 mb-3" style="display:flex; flex-wrap:wrap;">
+            <div class="col-md-4 col-sm-6 col-6 mb-4 " *ngFor="let items of item">
+                <div class="card card-container p-3 pb-0">
+                    <div class="card-body">
+                        <h2 class="card-title font-weight-bolder"><strong>{{items.name}}</strong></h2>
+                        <p class="card-text description-height">{{items.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 col-sm-10">
+                    <h2>Safe & Secure</h2>
+                </div>
+                <div class="col-md-1 col-sm-10">
+                    <i class="fa fa-shield pt-2 text-color" style="font-size: 30px;"></i>
+                </div>
+                <div class="col-md-5 col-sm-10">
+                    <p>A Power-packed application platform, with no drag on customer mobiles. Data is secured in-flight
+                        and Apps are fully native. Leverage SIC’s customisable applications with your own brand, in a
+                        secured way.</p>
+                </div>
+                <div class="col-md-3 col-sm-10">
+                    <h2 class="text-color float-right">Starting at Zero Cost</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features-background-color">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 col-sm-10">
+                    <h2>Analytics Ready</h2>
+                </div>
+                <div class="col-md-1 col-sm-10">
+                    <i class="fa fa-line-chart pt-1 text-color" style="font-size: 30px;"></i>
+                </div>
+                <div class="col-md-5 col-sm-10">
+                    <p>When mere seconds can cause exponential profits or crippling losses, you need a platform that
+                        serves you with relevant market data in real-time.</p>
+                </div>
+                <div class="col-md-3 col-sm-10">
+                    <h2 class="text-color">AI Enabled</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 col-sm-10">
+                    <h2>Teams that Care</h2>
+                </div>
+                <div class="col-md-1 col-sm-10">
+                    <i class="fa fa-user pt-1 text-color" style="font-size: 30px;"></i>
+                </div>
+                <div class="col-md-5 col-sm-10">
+                    <p>From internationally based tech teams to experienced compliance geeks, SIC is proud to power the
+                        next generation of apps backed by an expert group of people who make things work, 24-7.</p>
+                </div>
+                <div class="col-md-3 col-sm-10">
+                    <h2 class="text-color">Now BSE Powered</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="home-background-color text-center text-white py-5">
+    <div class="container py-5">
+        <h1>Bringing India To The World</h1>
+        <p>Our company is a global provider of technology based financial services, backed by industry leading
+            technology and security. Our partners range from investment advisors based in India to Technology players
+            around the globe.</p>
+    </div>
+</div>
