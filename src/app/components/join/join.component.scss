@@ -4,3 +4,29 @@
 .description-height {
     min-height: 120px;
 }
+.title-height {
+    min-height: 40px;
+}
+.top-banner {
+    background-image: url("../../../assets/images/join_banner.png");
+    height: 30vw;
+    min-height: 30vw;
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.card-form-container {
+    display: flex;
+    align-items: center;
+    height: 30vw;
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+}
+
+@media (max-width: 991px) {
+    .top-banner {
+        height: 45vw;
+    }
+}

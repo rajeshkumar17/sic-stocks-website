@@ -7,4 +7,16 @@
      width: 50%;
      justify-content: space-between;
 }
-   
+
+.navbar {    
+     .navbar-nav li a {
+          &:hover, &:focus, &:active {
+          color: #0077ed;
+          font-weight: bold;
+          background-color: transparent;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          }
+     }
+}

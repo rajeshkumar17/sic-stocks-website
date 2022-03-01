@@ -27,10 +27,10 @@ export class JoinComponent implements OnInit {
     { key: 6,title:"Easy Onboarding & online payment", imageUrl: '../../../assets/images/mobile-payment.png'},
   ]
   productData = [
-    {title1:"Equity Segment", title2:"Mobile Application",title3:"Dealer Terminal",title4:"Client Terminal" },
-    {title1:"Mutual Fund Platform", title2:"Star Mutual Funds",title3:"Wealth Advisory",title4:"Web Based BO Software" },
-    {title1:"Tradepoint on Web OMS", title2:"Personalised Branded Email",title3:"Online eKYC",title4:"SIC Wealth" },
-    {title1:"ETF Platform", title2:"Mange Portfolio", title3:"",title4:""}
+    { title1:"Equity Segment", title2:"Mobile Application",title3:"Dealer Terminal",title4:"Client Terminal" },
+    { title1:"Mutual Fund Platform", title2:"Star Mutual Funds",title3:"Wealth Advisory" },
+    { title1: "Web Based BO Software", title2:"Tradepoint on Web OMS", title3:"Personalised Branded Email",title4:"Online eKYC" },
+    { title1:"SIC Wealth", title2:"ETF Platform", title3:"Mangee Portfolio" }
   ]
 
 
